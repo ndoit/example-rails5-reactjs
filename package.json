@@ -5,7 +5,7 @@
     "node": "6.9.5"
   },
   "scripts": {
-    "build": "npm --cwd client install && npm --cwd client build",
+    "build": "npm install --cwd client && npm run build --cwd client",
     "deploy": "cp -a client/build/. public/",
     "heroku-postbuild": "npm run build && npm run deploy"
   }
