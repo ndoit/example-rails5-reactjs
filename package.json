@@ -2,11 +2,12 @@
   "name": "rock-solid-modern-ingredients-app",
   "license": "MIT",
   "engines": {
-    "node": "6.9.5"
+    "node": "6.9.5",
+    "yarn": "1.7.0"
   },
   "scripts": {
-    "build": "npm install --cwd client && npm run build --cwd client",
+    "build": "yarn --cwd client install && yarn --cwd client build",
     "deploy": "cp -a client/build/. public/",
-    "heroku-postbuild": "npm run build && npm run deploy"
+    "heroku-postbuild": "yarn build && yarn deploy"
   }
 }
